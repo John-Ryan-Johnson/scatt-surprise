@@ -29,6 +29,7 @@ const PublicRoute = ({ component: Component, authed, ...rest }) => {
     : (<Redirect to={{ pathname: '/home', state: { from: props.location } }} />));
   return <Route {...rest} render={(props) => routeChecker(props)} />;
 };
+
 const PrivateRoute = ({ component: Component, authed, ...rest }) => {
   const routeChecker = (props) => (authed === true
     ? (<Component {...props} />)
@@ -61,7 +62,7 @@ class App extends React.Component {
       <div className="App">
         <BrowserRouter>
           <React.Fragment>
-            <MyNavbar/>
+            <MyNavbar />
             <div className="container">
               <div className="row">
                 <Switch>
@@ -70,7 +71,7 @@ class App extends React.Component {
                   <PrivateRoute path='/edit/:scatId' component={EditScat} authed={authed} />
                   <PrivateRoute path='/scats/:scatId' component={SingleScat} authed={authed} />
                   <PublicRoute path='/auth' component={Auth} authed={authed} />
-                  <Redirect from="*" to="/home" />
+                  <Redirect from="*" to="/home"/>
                 </Switch>
               </div>
             </div>
