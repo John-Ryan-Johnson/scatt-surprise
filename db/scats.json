@@ -1,0 +1,13 @@
+{
+"scat1": {
+  "color": "green",
+  "shape": "italy",
+  "size": "small",
+  "temperature": 99,
+  "viscosity": "liquid",
+  "wasFulfilling": true,
+  "location": "NSS parking lot",
+  "notes": "almost stepped on it",
+  "uid": ""
+}
+}
